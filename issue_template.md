@@ -8,6 +8,7 @@ Ref. Intel 64 and IA-32 Architecture Software Developer's Manual Vol. **TODO**
 ```
 0xTODO
 ```
+_NOTE:_ All combinations of prefixes are omitted.
 
 ## Reproduction guide
 **Instruction:**
