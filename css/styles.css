@@ -6,10 +6,12 @@ body {
 }
 
 .container {
-    padding: 40px 5px;
+    padding: 70px 5px;
 }
 
-#header {
-    padding-bottom: 15px;
+.header {
     text-align: center;
+}
+.header p {
+    padding-top: 10px;
 }

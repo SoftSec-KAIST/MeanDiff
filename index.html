@@ -13,154 +13,224 @@
     <link rel="stylesheet" href="css/styles.css?v=1.0">
 </head>
 
-<body>
+<body data-spy="scroll" data-target=".navbar">
     <div class="container">
-        <h1 id="header">MeanDiff</h1>
 
-        <div class="row">
-            <!-- PyVEX -->
-            <div class="col-md-4">
-                <h3>PyVEX</h3>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Tag</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/24">PyVEX1</a></td>
-                            <td>Missing arithmetic operation</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/9">PyVEX2</a></td>
-                            <td>Useless memory</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/10">PyVEX3</a></td>
-                            <td>Invalid stack operation</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/25">PyVEX4</a></td>
-                            <td>Not storing segment register [x64]</td>
-                        </tr>
-                    </tbody>
-                </table>
+        <!-- Static navbar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed"
+                            data-toggle="collapse" data-target="#navbar"
+                            aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">MeanDiff</a>
+                </div>
+                <div id="navbar" class="navbar-collapse collapse">
+                    <ul class="nav navbar-nav">
+                        <li class="active"><a href="#home">Home</a></li>
+                        <li><a href="#project">Project</a></li>
+                        <li><a href="#about">About</a></li>
+                    </ul>
+                </div>
             </div>
-            <!-- BAP -->
-            <div class="col-md-4">
-                <h3>BAP</h3>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Tag</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/1">BAP1</a></td>
-                            <td>Confusion of source and destination operands</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/2">BAP2</a></td>
-                            <td>Invalid OF calculation</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/3">BAP3</a></td>
-                            <td>Destination address changed</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/6">BAP4</a></td>
-                            <td>Not taking mod size</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/4">BAP5</a></td>
-                            <td>Missing signed extension</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/7">BAP6</a></td>
-                            <td>Invalid CF calculation</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/8">BAP7</a></td>
-                            <td>No memory alignment</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-            <!-- BINSEC -->
-            <div class="col-md-4">
-                <h3>BINSEC</h3>
-                <table class="table table-striped">
-                    <thead>
-                        <tr>
-                            <th>Tag</th>
-                            <th>Description</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/11">BINSEC1</a></td>
-                            <td>Invalid CF calculation</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/12">BINSEC2</a></td>
-                            <td>Invalid OF calculation</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/13">BINSEC3</a></td>
-                            <td>Invalid stack operation</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/14">BINSEC4</a></td>
-                            <td>Invalid padding</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/5">BINSEC5</a></td>
-                            <td>Missing signed extension</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/15">BINSEC6</a></td>
-                            <td>Destination address changed</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/16">BINSEC7</a></td>
-                            <td>No memory alignment</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/17">BINSEC8</a></td>
-                            <td>Invalid store/load AF behaviour</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/18">BINSEC9</a></td>
-                            <td>Invalid order of calculation</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/19">BINSEC10</a></td>
-                            <td>Not taking part of value</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/20">BINSEC11</a></td>
-                            <td>Invalid AF calculation</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/21">BINSEC12</a></td>
-                            <td>Confusion of source and destination operands</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/22">BINSEC13</a></td>
-                            <td>Unable to recognize prefix</td>
-                        </tr>
-                        <tr>
-                            <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/23">BINSEC14</a></td>
-                            <td>Invalid pushad behaviour</td>
-                        </tr>
-                    </tbody>
-                </table>
+        </nav>
+
+        <!-- Content -->
+        <div id="home" class="jumbotron header">
+            <h1>MeanDiff</h1>
+            <p>Testing Intermediate Representations for Binary Analysis</p>
+        </div>
+
+        <div class="description">
+           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
+           hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam
+           nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis
+           natoque penatibus et magnis dis parturient montes, nascetur ridiculus
+           mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non
+           turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum
+           accumsan nisl.
+        </div>
+
+        <div id="project">
+            <h2>Bugs Found</h2>
+            <p>
+                Below is the list of bugs found by MeanDiff for eacho of the tested binary lifters.
+            </p>
+            <p>
+                Each bug is linked to an issue, found on the main Github
+                repository, where the bug is described in detail and discussed
+                with the respective tool's developers.
+            </p>
+
+            <div class="row">
+                <!-- PyVEX -->
+                <div class="col-md-4">
+                    <h3>PyVEX</h3>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Tag</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/24">PyVEX1</a></td>
+                                <td>Missing arithmetic operation</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/9">PyVEX2</a></td>
+                                <td>Useless memory</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/10">PyVEX3</a></td>
+                                <td>Invalid stack operation</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/25">PyVEX4</a></td>
+                                <td>Not storing segment register [x64]</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- BAP -->
+                <div class="col-md-4">
+                    <h3>BAP</h3>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Tag</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/1">BAP1</a></td>
+                                <td>Confusion of source and destination operands</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/2">BAP2</a></td>
+                                <td>Invalid OF calculation</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/3">BAP3</a></td>
+                                <td>Destination address changed</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/6">BAP4</a></td>
+                                <td>Not taking mod size</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/4">BAP5</a></td>
+                                <td>Missing signed extension</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/7">BAP6</a></td>
+                                <td>Invalid CF calculation</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/8">BAP7</a></td>
+                                <td>No memory alignment</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!-- BINSEC -->
+                <div class="col-md-4">
+                    <h3>BINSEC</h3>
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>Tag</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/11">BINSEC1</a></td>
+                                <td>Invalid CF calculation</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/12">BINSEC2</a></td>
+                                <td>Invalid OF calculation</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/13">BINSEC3</a></td>
+                                <td>Invalid stack operation</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/14">BINSEC4</a></td>
+                                <td>Invalid padding</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/5">BINSEC5</a></td>
+                                <td>Missing signed extension</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/15">BINSEC6</a></td>
+                                <td>Destination address changed</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/16">BINSEC7</a></td>
+                                <td>No memory alignment</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/17">BINSEC8</a></td>
+                                <td>Invalid store/load AF behaviour</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/18">BINSEC9</a></td>
+                                <td>Invalid order of calculation</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/19">BINSEC10</a></td>
+                                <td>Not taking part of value</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/20">BINSEC11</a></td>
+                                <td>Invalid AF calculation</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/21">BINSEC12</a></td>
+                                <td>Confusion of source and destination operands</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/22">BINSEC13</a></td>
+                                <td>Unable to recognize prefix</td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/SoftSec-KAIST/MeanDiff/issues/23">BINSEC14</a></td>
+                                <td>Invalid pushad behaviour</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
             </div>
         </div>
+        <div id="about">
+            <h2>About Us</h2>
+            <p>
+                Pellentesque dapibus suscipit ligula. Donec posuere augue in quam. Etiam vel
+                tortor sodales tellus ultricies commodo. Suspendisse potenti. Aenean in sem ac
+                leo mollis blandit. Donec neque quam, dignissim in, mollis nec, sagittis eu,
+                wisi. Phasellus lacus. Etiam laoreet quam sed arcu. Phasellus at dui in ligula
+                mollis ultricies. Integer placerat tristique nisl. Praesent augue. Fusce
+                commodo. Vestibulum convallis, lorem a tempus semper, dui dui euismod elit,
+                vitae placerat urna tortor vitae lacus. Nullam libero mauris, consequat quis,
+                varius et, dictum id, arcu. Mauris mollis tincidunt felis. Aliquam feugiat
+                tellus ut neque. Nulla facilisis, risus a rhoncus fermentum, tellus tellus
+                lacinia purus, et dictum nunc justo sit amet elit.
+            </p>
+        </div>
+
     </div>
+
+    <!-- Lazy javascript -->
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
-</html>
