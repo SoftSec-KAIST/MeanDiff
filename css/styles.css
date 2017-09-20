@@ -15,3 +15,15 @@ body {
 .header p {
     padding-top: 10px;
 }
+
+/* sections */
+
+#about img#softsec {
+    float: right;
+    width: 20%;
+    margin: 100px 90px 0px 0px;
+    /* overflow: auto; */
+}
+#about ul li {
+    padding-bottom: 10px;
+}
