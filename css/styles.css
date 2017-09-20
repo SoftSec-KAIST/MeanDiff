@@ -9,21 +9,21 @@ body {
     padding: 70px 5px;
 }
 
-.header {
+/* sections */
+
+.section#home {
     text-align: center;
 }
-.header p {
+.section#home p {
     padding-top: 10px;
 }
 
-/* sections */
-
-#about img#softsec {
+.section#about img#softsec {
     float: right;
     width: 20%;
     margin: 100px 90px 0px 0px;
     /* overflow: auto; */
 }
-#about ul li {
+.section#about ul li {
     padding-bottom: 10px;
 }
