@@ -32,7 +32,8 @@
                 <div id="navbar" class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#home">Home</a></li>
-                        <li><a href="#project">Project</a></li>
+                        <li><a href="#system">System</a></li>
+                        <li><a href="#bugs">Bugs</a></li>
                         <li><a href="#about">About</a></li>
                     </ul>
                 </div>
@@ -40,27 +41,54 @@
         </nav>
 
         <!-- Content -->
-        <div class="section jumbotron" id="home">
-            <h1>MeanDiff</h1>
-            <p class="text-primary">Testing Intermediate Representations for Binary Analysis</p>
-        </div>
 
-        <div class="section" id="description">
-           Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec
-           hendrerit tempor tellus. Donec pretium posuere tellus. Proin quam
-           nisl, tincidunt et, mattis eget, convallis nec, purus. Cum sociis
-           natoque penatibus et magnis dis parturient montes, nascetur ridiculus
-           mus. Nulla posuere. Donec vitae dolor. Nullam tristique diam non
-           turpis. Cras placerat accumsan nulla. Nullam rutrum. Nam vestibulum
-           accumsan nisl.
-        </div>
+        <div class="section" id="home">
+            <div class="jumbotron" id="header">
+                <h1>MeanDiff</h1>
+                <p class="text-primary">Testing Intermediate Representations for Binary Analysis</p>
+            </div>
 
-        <div class="section" id="project">
-            <h2>Bugs Found</h2>
             <p>
-                Below is the list of bugs found by MeanDiff for eacho of the tested binary lifters.
+                Binary lifting, which is to translate a binary executable to a
+                high-level intermediate representation, is a primary step in
+                binary analysis. Despite its importance, there are only few
+                existing approaches to testing the correctness of binary
+                lifters.
             </p>
             <p>
+                The MeanDiff project is the first systematic approach to testing
+                binary lifters.
+            </p>
+        </div>
+
+        <div class="section" id="system">
+            <h2>The System</h2>
+            <img id="arch" alt="The MeanDiff architecture" src="images/arch.png" />
+            <p>
+               Nullam eu ante vel est convallis dignissim. Fusce suscipit, wisi
+               nec facilisis facilisis, est dui fermentum leo, quis tempor
+               ligula erat quis odio. Nunc porta vulputate tellus. Nunc rutrum
+               turpis sed pede. Sed bibendum. Aliquam posuere. Nunc aliquet,
+               augue nec adipiscing interdum, lacus tellus malesuada massa, quis
+               varius mi purus non odio. Pellentesque condimentum, magna ut
+               suscipit hendrerit, ipsum augue ornare nulla, non luctus diam
+               neque sit amet urna. Curabitur vulputate vestibulum lorem. Fusce
+               sagittis, libero non molestie mollis, magna orci ultrices dolor,
+               at vulputate neque nulla lacinia eros. Sed id ligula quis est
+               convallis tempor. Curabitur lacinia pulvinar nibh. Nam a sapien.
+            </p>
+        </div>
+
+        <div class="section" id="bugs">
+            <h2>Bugs Found</h2>
+            <p>
+                We have evaluated the proposed system on 3 state-of-the-art
+                binary lifters, and found 24 previously unknown semantic bugs.
+                Our result demonstrates that writing a precise binary lifter is
+                extremely difficult even for those heavily tested projects.
+            </p>
+            <p>
+                Below is the list of bugs found by MeanDiff for each of the tested binary lifters.
                 Each bug is linked to an issue, found on the main Github
                 repository, where the bug is described in detail and discussed
                 with the respective tool's developers.
@@ -218,7 +246,7 @@
                 under Gratuate School of Information Security at KAIST, Republic
                 of Korea. The researchers involved are:
             </p>
-            <img id="softsec" src="images/softsec.png" alt="SoftSec Lab" />
+            <img id="softsec" alt="SoftSec Lab" src="images/softsec.png" />
             <ul>
                 <li>
                     Soomin Kim &lt;soomink (at) kaist.ac.kr&gt;<br/>

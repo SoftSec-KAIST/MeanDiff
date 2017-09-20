@@ -11,16 +11,20 @@ body {
 
 /* sections */
 
-.section#home {
+.section#home #header {
     text-align: center;
 }
-.section#home p {
+.section#home #header p {
     padding-top: 10px;
+}
+
+.section#system img#arch {
+    width: 200px;
 }
 
 .section#about img#softsec {
     float: right;
-    width: 20%;
+    width: 250px;
     margin: 100px 90px 0px 0px;
     /* overflow: auto; */
 }
