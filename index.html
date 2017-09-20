@@ -68,17 +68,19 @@
             <h2>The System</h2>
             <img id="arch" alt="The MeanDiff architecture" src="images/arch.png" />
             <p>
-               Nullam eu ante vel est convallis dignissim. Fusce suscipit, wisi
-               nec facilisis facilisis, est dui fermentum leo, quis tempor
-               ligula erat quis odio. Nunc porta vulputate tellus. Nunc rutrum
-               turpis sed pede. Sed bibendum. Aliquam posuere. Nunc aliquet,
-               augue nec adipiscing interdum, lacus tellus malesuada massa, quis
-               varius mi purus non odio. Pellentesque condimentum, magna ut
-               suscipit hendrerit, ipsum augue ornare nulla, non luctus diam
-               neque sit amet urna. Curabitur vulputate vestibulum lorem. Fusce
-               sagittis, libero non molestie mollis, magna orci ultrices dolor,
-               at vulputate neque nulla lacinia eros. Sed id ligula quis est
-               convallis tempor. Curabitur lacinia pulvinar nibh. Nam a sapien.
+                MeanDiff is a tool implementing N-version IR testing technique.
+                Currently, it supports 3 lifters for testing their semantics. If
+                you give an instruction set architecture (ISA) to MeanDiff, it
+                can generate a finite subset of all instructions which covers as
+                large a portion possible of the ISA's syntactic structure.
+                Whenever it generates a set of instructions, it uses them to
+                lift such instructions to the target IRs, whose semantics are
+                implemented by each lifter. Then, MeanDiff translates the
+                translated IRs into UIR (Unified IR) to compare their semantics.
+                Once the IR is translated, MeanDiff calculates the symbolic
+                summary containing the meaning of the instruction, which are
+                then compared. Any semantic discrepancy represents a bug in at
+                least one of the lifters.
             </p>
         </div>
 
