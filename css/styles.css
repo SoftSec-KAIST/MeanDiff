@@ -6,7 +6,15 @@ body {
 }
 
 .container {
+    width: 70%;
     padding: 70px 5px;
+}
+
+.footer {
+    clear: both;
+    margin: 50px 0 -30px 0;
+    text-align: center;
+    color: grey;
 }
 
 /* sections */
@@ -19,14 +27,15 @@ body {
 }
 
 .section#system img#arch {
-    width: 200px;
+    float: right;
+    width: 500px;
+    margin: 0px 0px 10px 10px;
 }
 
 .section#about img#softsec {
     float: right;
     width: 250px;
-    margin: 100px 90px 0px 0px;
-    /* overflow: auto; */
+    margin: 100px 90px 20px 10px;
 }
 .section#about ul li {
     padding-bottom: 10px;
