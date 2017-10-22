@@ -1,9 +1,9 @@
 # MeanDiff
 
-If you want some academic details, go to
+If you want to see the details about the system, go to
 [here](https://softsec-kaist.github.io/MeanDiff/).
 
-## Table of Content
+## Table of Contents
 
 * [Installation](#installation)
 * [Usage](#usage)
@@ -61,10 +61,20 @@ is also designed to be explicit and self-contained.
 
 #### Semantics
 
+T.B.D.
+
 ### Writing translator for UIR
+
+T.B.D.
 
 ### Adding translator to MeanDiff
 
+T.B.D.
+
 ## Contributing
 
-## Sponsors
+T.B.D.
+
+## Acknowledgement
+
+The work was supported by Institute for Information & communications Technology Promotion (IITP) grant funded by the Korea government (MSIT).
