@@ -14,7 +14,8 @@ If you want to see the details about the system, go to
   * [Writing translator for UIR](#writing-translator-to-uir)
   * [Adding translator to MeanDiff](#adding-translator-to-meandiff)
 * [Contributing](#contributing)
-* [Sponsors](#sponsors)
+* [License](#license)
+* [Acknowledgement](#acknowledgement)
 
 ## Installation
 
@@ -74,6 +75,10 @@ T.B.D.
 ## Contributing
 
 T.B.D.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE.md).
 
 ## Acknowledgement
 
