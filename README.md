@@ -19,11 +19,45 @@ If you want to see the details about the system, go to
 
 ## Installation
 
-T.B.D.
+As MeanDiff has several external dependencies due to lifters and external
+libraries, the whole build system is containerized with docker.
+
+All docker images (for each lifter, etc.) are based to the `BaseImage` (T.B.D
+Link), which used `ubuntu:16.10`.
+
+### Building
+
+Start by building submodules. This could take some time as the docker images
+needs to be downloaded and built.
+
+    make init
+    make lifters
+    make external
+    
+Now, MeanDiff can be built either 
+ * A. Inside the docker container 
+ * B. In your native environment
+
+For option B., you can find dependencies in the respective `Dockerfile`s.
+
+The resulting binaries are found in the `build` directory.
+
+#### A.
+To build and setup docker environment:
+
+    ./build_image.sh
+    ./build_src.sh
+    
+#### B.
+If you want to run MeanDiff outside docker, just type `make`.
 
 ## Usage
 
 T.B.D.
+
+To log into the docker container for MeanDiff, taged `build_meandiff`:
+
+    docker run -v $(pwd):/src -ti build_meandiff:latest
 
 ## Testing additional lifters
 
