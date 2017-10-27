@@ -13,7 +13,7 @@ If you want to see the details about the system, go to
     * [Semantics](#semantics)
   * [Writing translator for UIR](#writing-translator-to-uir)
   * [Adding translator to MeanDiff](#adding-translator-to-meandiff)
-* [Contributing](#contributing)
+* [Citing MeanDiff](#citing-meandiff)
 * [License](#license)
 * [Acknowledgement](#acknowledgement)
 
@@ -33,9 +33,9 @@ needs to be downloaded and built.
     make init
     make lifters
     make external
-    
-Now, MeanDiff can be built either 
- * A. Inside the docker container 
+
+Now, MeanDiff can be built either
+ * A. Inside the docker container
  * B. In your native environment
 
 For option B., you can find dependencies in the respective `Dockerfile`s.
@@ -47,7 +47,7 @@ To build and setup docker environment:
 
     ./build_image.sh
     ./build_src.sh
-    
+
 #### B.
 If you want to run MeanDiff outside docker, just type `make`.
 
@@ -96,19 +96,52 @@ is also designed to be explicit and self-contained.
 
 #### Semantics
 
-T.B.D.
+Here, only non-trivial semantics of UIR are shown.
+
+Primitive types: `<Num>`, `<Var>`, `<Size>`, `<Symbol>`
+
+`<Expr>`:
+ - `[<Expr>]:<Size>`: Load a value of size `<Size>` from `<Expr>`.
+ - `<Expr> -> <CastOpT>:<Size>`: Enlarge or shorten `<Expr>` of size `<Size>` by
+    referencing `<CastOpT>`.
+ - `If <Expr0> <Expr1> <Expr2>`: If-Then-Else expression. `<Expr1>` and
+    `<Expr2>` should have same type.
+
+`<Stmt>`:
+ - `Start <Value> <Size> <EndianT>`: Indicate information aboutn an instruction
+    and system. The target instruction is placed at `<Value>` with length
+    `<Size>`, and has the endianness of `<EndianT>`.
+ - `[<Expr1>] := <Expr2>`: Store `<Expr2>` into the memory pointed by `<Expr1>`.
+ - `End <Expr>`: Indicates the end of control-flow of IR statements. `<Expr>`
+    represents the address of next instruction.
 
 ### Writing translator for UIR
 
-T.B.D.
+There are some rules for a translator from your IR to our UIR.
+ - Register names must be in lower cases
+ - For each expression and statement, we have a simple type system. See
+    `src/MeanDiff/Type.fs`
+ - The first item in `<Stmts>` should be `Start`
+ - `End` must be placed at the end of the instruction semantics.
 
 ### Adding translator to MeanDiff
 
-T.B.D.
+In order to add your translator to MeanDiff, you need to manually modify
+`src/MeanDiff/Report.fs` appropriately.
 
-## Contributing
+## Citing MeanDiff
 
-T.B.D.
+To cite our paper:
+
+```
+@INPROCEEDINGS{kim:ase2017,
+    author = {Soomin Kim, Markus Faerevaag, Minkyu Jung, SeungIl Jung, DongYeop Oh, JongHyup Lee, and Sang Kil Cha},
+    title = {Testing Intermediate Representations for Binary Analysis},
+    booktitle = {Proceedings of the 32nd IEEE/ACM International Conference on Automated Software Engineering},
+    year = {2017},
+    pages = {353--364}
+}
+```
 
 ## License
 
