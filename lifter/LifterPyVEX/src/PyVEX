@@ -1,0 +1,14 @@
+#!/usr/bin/python
+
+from LifterPyVEX-src import lift
+import sys
+
+if __name__ == '__main__':
+    print lift(sys.argv[1], sys.argv[2])
+    '''
+    with open('/home/soomink/repos/MeanDiff/src/build/Debug/insn_x86_orig') as f:
+        l = map(lambda x: x.strip(), f.readlines())
+    for insn in l:
+        print insn
+        lift('x86', insn)
+    '''

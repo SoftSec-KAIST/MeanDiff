@@ -1,0 +1,10 @@
+EXTERNALS := $(wildcard External*)
+
+all: $(EXTERNALS)
+
+$(EXTERNALS):
+	cd $@ && ./build_image.sh
+	cd $@ && ./build_src.sh
+	cd $@ && cp build/$@ ../../build/$@
+
+.PHONY: all $(EXTERNALS)
