@@ -1,0 +1,5 @@
+S src
+S src/**
+B build
+B build/**
+PKG yojson zmq zarith

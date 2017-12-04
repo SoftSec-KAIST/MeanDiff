@@ -1,0 +1,11 @@
+LIFTERS := LifterPyVEX LifterBINSEC LifterBAP
+#LIFTERS := $(wildcard */.)
+
+all: $(LIFTERS)
+
+$(LIFTERS):
+	cd $@ && ./build_image.sh
+	cd $@ && ./build_src.sh
+	cd $@ && cp -r build/$@* ../../build/
+
+.PHONY: all $(LIFTERS)

@@ -1,0 +1,6 @@
+true                                               : warn(A-4-3-19-18-58)
+<dba/**>                                           : include
+<base/**>                                          : include
+<loader/**>                                        : include
+<disasm/**>                                        : include,  inline(10000)
+<utils/**>                                         : include

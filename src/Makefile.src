@@ -1,0 +1,34 @@
+MONO = /usr/bin/mono
+
+SRC = MeanDiff/*.fs*
+BUILDDIR = build
+PKGDIR = packages
+
+TARGET = $(BUILDDIR)/Debug/MeanDiff.exe
+
+NUGET = $(PKGDIR)/nuget.exe
+FAKE = $(PKGDIR)/FAKE/tools/FAKE.exe
+
+all: $(PKGDIR) $(NUGET) $(FAKE) $(TARGET)
+
+$(TARGET): build.fsx $(SRC)
+	$(MONO) $(FAKE) $<
+	cp $(BUILDDIR)/Debug/* ../$(BUILDDIR)/
+
+$(PKGDIR):
+	mkdir -p $@
+
+$(NUGET):
+	wget https://dist.nuget.org/win-x86-commandline/latest/nuget.exe -O $(NUGET)
+
+$(FAKE):
+	$(MONO) $(NUGET) install FAKE -OutputDirectory packages \
+		-ExcludeVersion
+
+package: $(FAKE) build.fsx
+	$(MONO) $(FAKE) build.fsx $@
+
+clean: $(FAKE) build.fsx
+	$(MONO) $(FAKE) build.fsx $@
+
+.PHONY: all package clean

@@ -1,0 +1,10 @@
+TAGS
+src/.fake
+build
+src/MeanDiff/AssemblyInfo.fs
+src/MeanDiff/obj
+src/packages
+/insn_x86
+/insn_x64
+/reports32
+/reports64

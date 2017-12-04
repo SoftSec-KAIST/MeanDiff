@@ -1,0 +1,87 @@
+* BINCOA Translator                                                :TOC_4_hg:
+ - [[#installation-of-binsec][Installation of BINSEC]]
+   - [[#1-system-dependencies][1. System dependencies]]
+   - [[#2-ocaml-libraries][2. Ocaml libraries]]
+   - [[#3-install-binsec][3. Install BINSEC]]
+ - [[#usage-of-binsec][Usage of BINSEC]]
+ - [[#installation-of-bincoa-trans][Installation of `bincoa`]]
+   - [[#1-system-dependencies][1. System dependencies]]
+   - [[#2-ocaml-libraries][2. Ocaml libraries]]
+   - [[#3-install-bincoa-trans][3. Install `bincoa`]]
+ - [[#usage-of-bincoa-trans][Usage of `bincoa`]]
+ - [[#references][References]]
+
+** Installation of BINSEC
+   A write-up of my installation process of BINSEC
+   
+   Steps:
+    1. Install system dependencies
+    2. Install Ocaml libraries
+    3. Install BINSEC
+ 
+*** 1. System dependencies
+    On my Arch Linux box I had to install the following system packages:
+    - `ocaml` - OCaml compiler
+    - `camlp4` - Caml preprocessor and pretty-printer
+    - `opam` - OCaml Package Manager
+ 
+*** 2. Ocaml libraries
+    First initialize `~/.opam` with `opam init`.
+ 
+    And following packages, with `opam install`:
+     - `piqi`
+     - `piqilib`
+     - `menhir`
+     - `ocamlgraph`
+     - `zarith`
+     - `zmq`
+     - `llvm`
+ 
+*** 3. Install BINSEC
+    1. Download and extract [binsec-0.1](http://binsec.gforge.inria.fr/distrib/binsec-0.1-20170301.tgz)
+    2. Build
+ 
+           # ./configure
+           # make binsec
+           
+    3. Install (root permissions)
+    
+           $ cd src; make install
+ 
+** Usage of BINSEC
+   To decode single instruction, run `binsec disasm -decode 0000`.
+
+   For more information see `binsec disasm -help` or `binsec-0.1-*/README`.
+ 
+** Installation of `bincoa`
+   Dependencies are a subset of that of BINSEC, shown above, plus `yojson` from `opam`.
+
+   Steps:
+    1. Install system dependencies
+    2. Install Ocaml libraries
+    3. Install `bincoa`
+
+*** 1. System dependencies
+    - `ocaml`
+    - `opam`
+
+*** 2. Ocaml dependencies
+    Needed `opam` packages:
+    - `zarith`
+    - `zmq`
+    - `yojson`
+
+*** 3. Install `bincoa`
+    Simply run `make` and find the binary in `build/bincoa`.
+
+** Usage of `bincoa`
+   There is only one argument needed, which is the opcode, in hex.
+
+   BINSEC only supports 32-bit!
+
+   To decode opcode `0x0000` (`add [eax],al`), run `build/bincoa 0000`.
+ 
+** References
+   - [[BINCOA Project][http://bincoa.labri.fr/]]
+   - [[BINSEC][http://binsec.gforge.inria.fr/tools]]
+   - [[BINSEC Documentation][http://binsec.gforge.inria.fr/apiref/index.html]]
