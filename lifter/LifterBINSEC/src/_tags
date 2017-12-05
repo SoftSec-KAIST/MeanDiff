@@ -1,5 +1,0 @@
-true                                               : use_str
-true                                               : use_bigarray
-true                                               : package(yojson)
-true                                               : package(zarith)
-true                                               : package(ZMQ)

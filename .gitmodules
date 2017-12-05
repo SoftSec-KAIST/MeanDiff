@@ -1,0 +1,12 @@
+[submodule "lifter/LifterBAP"]
+	path = lifter/LifterBAP
+	url = git@github.com:SoftSec-KAIST/MeanDiff-LifterBAP.git
+[submodule "lifter/LifterBINSEC"]
+	path = lifter/LifterBINSEC
+	url = git@github.com:SoftSec-KAIST/MeanDiff-LifterBINSEC.git
+[submodule "lifter/LifterPyVEX"]
+	path = lifter/LifterPyVEX
+	url = git@github.com:SoftSec-KAIST/MeanDiff-LifterPyVEX.git
+[submodule "external/ExternalXED"]
+	path = external/ExternalXED
+	url = git@github.com:SoftSec-KAIST/MeanDiff-ExternalXED.git
